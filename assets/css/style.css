@@ -1,0 +1,34 @@
+.modal-header {
+    border-bottom: none;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.modal-header .logo {
+    display: block;
+    margin: 0 auto 10px;
+}
+.modal-header h5 {
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+}
+.modal-body {
+    text-align: center;
+}
+.modal-body form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+.modal-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.btn-primary {
+    background-color: #ff4757;
+    border: none;
+}
