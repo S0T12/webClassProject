@@ -40,12 +40,87 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav me-auto mb-lg-0">
 							<li class="nav-item">
+								<!-- Login Modal (Persian) -->
+								<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content" style="direction: rtl;"> <!-- Added RTL direction -->
+											<div class="modal-header">
+												<h5 class="modal-title" id="loginModalLabel">ورود</h5>
+												<!-- Persian for "Login" -->
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="بستن"></button> <!-- Persian for "Close" -->
+											</div>
+											<div class="modal-body">
+												<form>
+													<div class="mb-3">
+														<label for="loginEmail" class="form-label">آدرس ایمیل</label>
+														<!-- Persian for "Email address" -->
+														<input type="email" class="form-control" id="loginEmail"
+															aria-describedby="emailHelp">
+													</div>
+													<div class="mb-3">
+														<label for="loginPassword" class="form-label">رمز عبور</label>
+														<!-- Persian for "Password" -->
+														<input type="password" class="form-control" id="loginPassword">
+													</div>
+													<button type="submit" class="btn btn-danger">ورود</button>
+													<!-- Persian for "Login" -->
+												</form>
+												<p class="mt-3">حساب کاربری ندارید؟ <a href="#" data-bs-toggle="modal"
+														data-bs-target="#signupModal" data-bs-dismiss="modal">ثبت نام
+														کنید</a></p>
+												<!-- Persian for "Don't have an account? Sign up here" -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Signup Modal (Persian) -->
+								<div class="modal fade" id="signupModal" tabindex="-1"
+									aria-labelledby="signupModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content" style="direction: rtl;"> <!-- Added RTL direction -->
+											<div class="modal-header">
+												<h5 class="modal-title" id="signupModalLabel">ثبت نام</h5>
+												<!-- Persian for "Sign Up" -->
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="بستن"></button> <!-- Persian for "Close" -->
+											</div>
+											<div class="modal-body">
+												<form>
+													<div class="mb-3">
+														<label for="signupEmail" class="form-label">آدرس ایمیل</label>
+														<!-- Persian for "Email address" -->
+														<input type="email" class="form-control" id="signupEmail"
+															aria-describedby="emailHelp">
+													</div>
+													<div class="mb-3">
+														<label for="signupPassword" class="form-label">رمز عبور</label>
+														<!-- Persian for "Password" -->
+														<input type="password" class="form-control" id="signupPassword">
+													</div>
+													<div class="mb-3">
+														<label for="signupConfirmPassword" class="form-label">تایید رمز
+															عبور</label> <!-- Persian for "Confirm Password" -->
+														<input type="password" class="form-control"
+															id="signupConfirmPassword">
+													</div>
+													<button type="submit" class="btn btn-danger">ثبت نام</button>
+													<!-- Persian for "Sign Up" -->
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
 								<a class="btn active" aria-current="page" href="#" data-bs-toggle="modal"
 									data-bs-target="#loginModal" style="border: .5px solid rgb(224, 224, 224);">ورود |
 									ثبت نام</a>
 							</li>
 							<li class="nav-item">
-								<button class="btn" onclick="changeLanguage()">EN</button>
+								<button class="btn active" aria-current="page" href="#"
+									style="border: .5px solid rgb(224, 224, 224);"
+									onclick="changeLanguage()">EN</button>
 							</li>
 							<li class="nav-item me-2">
 								<a class="btn active" href="#" style="border: .5px solid rgb(224, 224, 224);">
@@ -1386,52 +1461,6 @@
 			</div>
 		</section>
 		<!-- End After Brands -->
-
-		<!-- Start Most Sold 
-        <section class="container-fluid container-xxl mt-5"
-            style="border: .5px solid rgb(224, 224, 224);border-radius: 16px;">
-            <a href="" class="text-decoration-none" dir="ltr"
-                style="display: flex;justify-content: start;top: 0;left: 0;margin-top: 10px;">مشاهده
-                همه</a>
-            <h3 class="text-center">
-                پر فروش ترین کالاها
-            </h3>
-            <br>
-            <div class="row">
-                <div class="col">
-                </div>
-                <div class="col">
-
-                </div>
-                <div class="col">
-
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col">
-
-                </div>
-                <div class="col">
-
-                </div>
-                <div class="col">
-
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col">
-
-                </div>
-                <div class="col">
-
-                </div>
-                <div class="col">
-
-                </div>
-            </div>
-        </section>
-         End Most Sold -->
-
 		<!-- Start Blog -->
 		<section class="container-fluid container-xxl mt-5">
 			<h5 class="text-end">خواندنی ها</h5>
@@ -2123,14 +2152,7 @@
 
 	<script>
 		function changeLanguage() {
-			const htmlElement = document.querySelector('html');
-			if (htmlElement.getAttribute('lang') === 'fa') {
-				htmlElement.setAttribute('lang', 'en');
-				document.dir = 'ltr';
-			} else {
-				htmlElement.setAttribute('lang', 'fa');
-				document.dir = 'rtl';
-			}
+			window.open('./enIndex.html', '_self');
 		}
 	</script>
 </body>
